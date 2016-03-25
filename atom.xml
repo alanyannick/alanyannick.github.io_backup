@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ymwin.xyz/"/>
-  <updated>2016-03-24T12:16:15.537Z</updated>
+  <updated>2016-03-25T02:17:39.977Z</updated>
   <id>http://ymwin.xyz/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nice Markdown Tool and Insert image</title>
+    <link href="http://ymwin.xyz/2016/03/25/Nice-Markdown-Tool-and-Insert-image/"/>
+    <id>http://ymwin.xyz/2016/03/25/Nice-Markdown-Tool-and-Insert-image/</id>
+    <published>2016-03-25T02:02:48.000Z</published>
+    <updated>2016-03-25T02:17:39.977Z</updated>
+    
+    <content type="html">&lt;p&gt;markdown toools link:&lt;br&gt;&lt;a href=&quot;https://maxiang.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;马克飞象&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1792431-401732c061e599d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;Paste_Image.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;The most efficient tools is link to [简书] （&lt;a href=&quot;http://www.jianshu.com/writer#/notebooks/3674637/notes/3355966/preview）&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jianshu.com/writer#/notebooks/3674637/notes/3355966/preview）&lt;/a&gt;&lt;br&gt;and paste the picture get the corresponding loading image link by markdown format.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;markdown toools link:&lt;br&gt;&lt;a href=&quot;https://maxiang.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;马克飞象&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jian
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Nice Tool for Caffe Framework Visualizatrion</title>
