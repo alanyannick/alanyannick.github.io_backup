@@ -228,8 +228,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/04/09/ubuntu14-04-opencv2-4-9-cuda7-0/" itemprop="url">
-                  ubuntu14.04+opencv2.4.9+cuda7.0
+                <a class="post-title-link" href="/2016/04/09/deep-learning-for-beginners/" itemprop="url">
+                  Deep Learning For Beginners
                 </a>
               
             
@@ -248,13 +248,32 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/DeepLearning/" itemprop="url" rel="index">
+                    <span itemprop="name">DeepLearning</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/09/ubuntu14-04-opencv2-4-9-cuda7-0/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/09/ubuntu14-04-opencv2-4-9-cuda7-0/" itemprop="commentsCount"></span>
+                <a href="/2016/04/09/deep-learning-for-beginners/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/09/deep-learning-for-beginners/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -264,7 +283,7 @@
 
           
           
-             <span id="/2016/04/09/ubuntu14-04-opencv2-4-9-cuda7-0/" class="leancloud_visitors" data-flag-title="ubuntu14.04+opencv2.4.9+cuda7.0">
+             <span id="/2016/04/09/deep-learning-for-beginners/" class="leancloud_visitors" data-flag-title="Deep Learning For Beginners">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -287,108 +306,158 @@
       
         
           
-            <p>###<em>Step1</em> install opencv2.4.9 on ubuntu </p>
-<ul>
-<li>(<em>recommand</em>)Opencv 2.4.9 according to </li>
+            <p><em>Author : yangming wen</em></p>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><hr>
+<p><code>Deep learning</code>(deep structured learning, hierarchical learning or deep machine learning) is a<br>branch of machine learning based on a set of algorithms that attempt to model high-level abst<br>-ractions in data by using multiple processing layers, with complex structures or otherwise,<br>composed of multiple non-linear transformations.</p>
+<p>Here are some references about learning procedures <em>from the perspective of beginners</em> and sharing<br>some resoures with deep learning about how beginners learned step by step. </p>
+<hr>
+<p><em>*If there are some more better suggestions,please add following and help make it better :)</em></p>
+<hr>
+<h2 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h2><ul>
+<li><a href="## Step-One:Mainly-build-up-the-basic-sense of-deep-learning">Step one: Mainly build up the basic sense of deep learning</a></li>
+<li><a href="## Step two: Notes of Basic Reference Paper for the beginners">Step two: Notes of Basic Reference Paper for the beginners</a></li>
+<li><a href="## Step three :Install caffe and train your own model">Step three : Install caffe and train your own model</a></li>
 </ul>
-<p>Total reference :<br><a href="http://www.cnblogs.com/platero/p/3993877.html" target="_blank" rel="external">http://www.cnblogs.com/platero/p/3993877.html</a><br><a href="http://blog.csdn.net/wingfox117/article/details/46278001" target="_blank" rel="external">http://blog.csdn.net/wingfox117/article/details/46278001</a><br><a href="http://blog.csdn.net/xyy19920105/article/details/50815660" target="_blank" rel="external">http://blog.csdn.net/xyy19920105/article/details/50815660</a></p>
+<hr>
+<h2 id="Step-one-Mainly-build-up-the-basic-sense-of-deep-learning"><a href="#Step-one-Mainly-build-up-the-basic-sense-of-deep-learning" class="headerlink" title="Step one: Mainly build up the basic sense of deep learning"></a>Step one: Mainly build up the basic sense of deep learning</h2><p><strong>[1].<a href="http://deeplearning.net/tutorial/" target="_blank" rel="external">Deep Learning Notes</a></strong><br>  <em>you can learn some basic senses about the deep learning</em></p>
 <blockquote>
-<p>reference link:<br><a href="http://stackoverflow.com/questions/28010399/build-opencv-with-cuda-support" target="_blank" rel="external">http://stackoverflow.com/questions/28010399/build-opencv-with-cuda-support</a><br>When meet the question of <code>NCVPixelOperations.hpp</code><br>Download link:<br>NCVPixelOperations.hpp_<br><a href="http://download.csdn.net/download/znculee/9294885" target="_blank" rel="external">http://download.csdn.net/download/znculee/9294885</a><br>to revise.</p>
-<p>####Steps:<br>download opencv2.4.9<br><code>unzip opencv-2.4.9
-cd opencv-2.4.9
-mkdir release
-cd release
-cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D CUDA_ARCH_BIN=3.2 ..
-make</code><br>success snapshot:<br><img src="http://img.blog.csdn.net/20160408131143436" alt="opencv"><br>after that,input command:</p>
-</blockquote>
-<p><code>sudo make install</code><br><img src="http://img.blog.csdn.net/20160408131946392" alt="这里写图片描述"></p>
-<p>Then how to import on the python<br><code>cp the cv2.so file which in the ~/opencv-2.4.9/build/lib</code><br>to<br><img src="http://img.blog.csdn.net/20160408153241537" alt="这里写图片描述"><br>and get the successful results:<br><img src="http://img.blog.csdn.net/20160408153345459" alt="这里写图片描述"></p>
+<p><em>Including:</em></p>
 <ul>
-<li>(normally)Opencv 2.4.9 according to<br><a href="http://blog.csdn.net/xiaojidan2011/article/details/40153933" target="_blank" rel="external">http://blog.csdn.net/xiaojidan2011/article/details/40153933</a><blockquote>
-<p>if you meet the following question like:<br><code>Building NVCC (Device) object modules/core/CMakeFiles/cuda_compile.dir/src/cuda/Debug/cuda_compile_generated_gpu_mat.cu.obj
-nvcc fatal : Unsupported gpu architecture &#39;compute_11&#39;</code><br>revise the command as:<br><code>cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D CUDA_GENERATION=Kepler ..</code></p>
-</blockquote>
-</li>
+<li>AutoEncoder</li>
+<li>Sparse Coding</li>
+<li>Restricted Boltzmann Machine(RBM)</li>
+<li>Deep BeliefNetworks</li>
+<li>Convolutional Neural Networks</li>
 </ul>
-<ul>
-<li><p>Other reference:<br>Opencv 3.0 according to <code>*(recommand)*</code><br><a href="https://github.com/jayrambhia/Install-OpenCV" target="_blank" rel="external">https://github.com/jayrambhia/Install-OpenCV</a></p>
-<blockquote>
-<p>just need to run the following code:<br><code>$ cd Ubuntu
-$ chmod +x * 
-$ ./opencv_latest.sh</code></p>
-</blockquote>
-</li>
-<li><p>Time consumption: about 30 minutes</p>
-</li>
-</ul>
-<p>###<em>Step2</em> install cuda7.0</p>
-<blockquote>
-<p>sudo dpkg -i cuda-repo-<distro><em><version></version></em><architecture>.deb<br>sudo apt-get update<br>sudo apt-get install cuda<br>export PATH=/usr/local/cuda-7.0/bin:$PATH</architecture></distro></p>
-<p>export LD_LIBRARY_PATH=/usr/local/cuda-7.0/lib64:$LD_LIBRARY_PATH<br>cd /etc/ld.so.conf.d<br>vim cuda.conf<br>(then adding)<br>usr/local/cuda-7.0/lib64</p>
-</blockquote>
-<p>###Step3 Boost</p>
-<blockquote>
-<p>sudo apt-get install mpi-default-dev　　#安装mpi库<br>sudo apt-get install libicu-dev　　　　　#支持正则表达式UNICODE字符集<br>sudo apt-get install python-dev　　　　　#需要python的话<br>sudo apt-get install libbz2-dev</p>
-<p>sudo apt-get install libatlas-base-dev </p>
-</blockquote>
-<p>###Step4 Caffe installing</p>
-<blockquote>
-<p>make all -j8<br>make test -j8<br>make run test -j8 </p>
-</blockquote>
-<p>when meet the error about:</p>
-<blockquote>
-<p>.build_release/tools/caffe<br>.build_release/tools/caffe: error while loading shared libraries: libcudart.so.7.0: cannot open shared object file: No such file or directory</p>
-</blockquote>
-<p><code>need to do</code>:</p>
-<blockquote>
-<p>export PATH=/usr/local/cuda-7.0/bin:$PATH </p>
-<p>export LD_LIBRARY_PATH=/usr/local/cuda-7.0/lib64:$LD_LIBRARY_PATH</p>
-</blockquote>
-<p><code>success:</code><br><img src="http://img.blog.csdn.net/20160408142424526" alt="这里写图片描述"></p>
-<p>##Step5 Python &amp; Matlab wrapper</p>
-<h3 id="Matlab-Wrapper"><a href="#Matlab-Wrapper" class="headerlink" title="Matlab Wrapper"></a>Matlab Wrapper</h3><p>then compile the <code>python wrapper</code> &amp; <code>matlab wrapper</code><br> if meet the error:</p>
-<blockquote>
-<p>In file included from ./include/caffe/util/device<em>alternate.hpp:40:0,<br>                 from ./include/caffe/common.hpp:19,<br>                 from ./include/caffe/blob.hpp:8,<br>                 from ./include/caffe/caffe.hpp:7,<br>                 from /home/ym/caffe-master/matlab/+caffe/private/caffe</em>.cpp:18:<br>./include/caffe/util/cudnn.hpp:5:19: fatal error: cudnn.h: No such file or directory</p>
-</blockquote>
-<p>then means that you should link the cuDNN<br><a href="http://www.cnblogs.com/platero/p/4118139.html" target="_blank" rel="external">http://www.cnblogs.com/platero/p/4118139.html</a></p>
-<blockquote>
-<p>tar -xzvf cudnn-6.5-linux-R1.tgz<br>cd cudnn-6.5-linux-R1<br>sudo cp lib* /usr/local/cuda/lib64/<br>sudo cp cudnn.h /usr/local/cuda/include/</p>
-</blockquote>
-<p>then you will see the success results:<br><img src="http://img.blog.csdn.net/20160408144221642" alt="这里写图片描述"></p>
-<p><img src="http://img.blog.csdn.net/20160408144309502" alt="这里写图片描述"></p>
-<p>When run matlab demo, i get the following error:</p>
-<blockquote>
-<p>Invalid MEX-file ‘/home/ym/caffe-master/matlab/+caffe/private/caffe_.mexa64’: libcudart.so.7.0: cannot open shared object file:<br>No such file or directory</p>
-</blockquote>
-<p>Solved link:<br><a href="http://www.cnblogs.com/smartvessel/archive/2011/01/21/1940868.html" target="_blank" rel="external">http://www.cnblogs.com/smartvessel/archive/2011/01/21/1940868.html</a><br>Methods:</p>
-<blockquote>
-<p>cd /etc/ld.so.conf.d<br>sudo vi cuda.conf<br>(adding)<br>/usr/local/cuda/lib64<br>(:wq)<br>sudo ldconfig</p>
 </blockquote>
 <hr>
+<p><strong>[2].<a href="http://handong1587.github.io/deep_learning/2015/10/09/dl-resources.html" target="_blank" rel="external">Beginner Reference Papers and Books</a></strong> </p>
 <blockquote>
-<p>总结下来主要有3种方法：</p>
-<ol>
-<li>用ln将需要的so文件链接到/usr/lib或者/lib这两个默认的目录下边<br>ln -s /where/you/install/lib/*.so /usr/lib<br>sudo ldconfig</li>
-</ol>
-<p>2.修改LD_LIBRARY_PATH<br>export LD_LIBRARY_PATH=/where/you/install/lib:$LD_LIBRARY_PATH<br>sudo ldconfig</p>
-<p>3.修改/etc/ld.so.conf，然后刷新<br>vim /etc/ld.so.conf<br>add /where/you/install/lib<br>sudo ldconfig</p>
+<p><em>Including:</em></p>
+<ul>
+<li>AlexNet</li>
+<li>GoogLeNet</li>
+<li>VGGNet</li>
+<li>Inception-v3</li>
+<li>ResNet</li>
+<li>Tensor</li>
+<li>Inception-v4</li>
+</ul>
 </blockquote>
 <hr>
-<p>###python wrapper</p>
+<p><strong>[3].<a href="https://medium.com/@jiefeng/deep-learning-playbook-c5ebe34f8a1a#.de7sdog46" target="_blank" rel="external">The Deep Learning Playbook</a></strong> </p>
 <blockquote>
-<p>1.revise the Makefile.configure<br><code>make pycaffe</code><br>2.after compile, export the PATH into the /etc/profile<br>and execute<br><code>source ~/.bashrc or /etc/profile</code><br>3.cannot find google.protobuf.internal:<br><img src="http://img.blog.csdn.net/20160408155501092" alt="这里写图片描述"></p>
+<p><em>Including:</em></p>
+<ul>
+<li>Libraries:<ul>
+<li>Theano (Python)</li>
+<li>Libraries based on Theano: Lasagne, Keras, Pylearn2</li>
+<li>Caffe (C++, with Python wrapper)</li>
+<li>TensorFlow (Python, C++)</li>
+<li>Torch (Lua)</li>
+<li>ConvNetJS (Javascript)</li>
+<li>Deeplearning4j (Java)</li>
+<li>MatConvNet (Matlab)</li>
+</ul>
+</li>
+<li>Projects / Demos:<ul>
+<li>All the tutorials of your favorite library above</li>
+<li>Facial Keypoint Detection</li>
+<li>Deep Dream</li>
+<li>Eyescream</li>
+<li>Deep Q-network (Atari game player)</li>
+<li>Caffe to Theano Model Conversion (use Caffe pretrained model in Lasagne)</li>
+<li>R-CNN</li>
+<li>Fast R-CNN</li>
+<li>Plankton Classification (winning solution of National Data Science Bowl on Kaggle)</li>
+<li>Galaxy Classification (winning solution of Kaggle competition)</li>
+<li>University of Toronto Demos</li>
+</ul>
+</li>
+</ul>
 </blockquote>
-<p>solve:</p>
-<blockquote>
-<p><code>conda install -c https://conda.anaconda.org/anaconda protobuf</code></p>
-</blockquote>
-<p><img src="http://img.blog.csdn.net/20160408155734009" alt="这里写图片描述"></p>
-<p>success!</p>
 <hr>
-<p>matlab configure:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line">## Refer to http://caffe.berkeleyvision.org/installation.html</span><br><span class="line"># Contributions simplifying and improving our build system are welcome!</span><br><span class="line"></span><br><span class="line"># cuDNN acceleration switch (uncomment to build with cuDNN).</span><br><span class="line">USE_CUDNN := 1</span><br><span class="line"></span><br><span class="line"># CPU-only switch (uncomment to build without GPU support).</span><br><span class="line"># CPU_ONLY := 1</span><br><span class="line"></span><br><span class="line"># uncomment to disable IO dependencies and corresponding data layers</span><br><span class="line"># USE_OPENCV := 0</span><br><span class="line"># USE_LEVELDB := 0</span><br><span class="line"># USE_LMDB := 0</span><br><span class="line"></span><br><span class="line"># uncomment to allow MDB_NOLOCK when reading LMDB files (only if necessary)</span><br><span class="line">#	You should not set this flag if you will be reading LMDBs with any</span><br><span class="line">#	possibility of simultaneous read and write</span><br><span class="line"># ALLOW_LMDB_NOLOCK := 1</span><br><span class="line"></span><br><span class="line"># Uncomment if you&apos;re using OpenCV 3</span><br><span class="line"># OPENCV_VERSION := 3</span><br><span class="line"></span><br><span class="line"># To customize your choice of compiler, uncomment and set the following.</span><br><span class="line"># N.B. the default for Linux is g++ and the default for OSX is clang++</span><br><span class="line"># CUSTOM_CXX := g++</span><br><span class="line"></span><br><span class="line"># CUDA directory contains bin/ and lib/ directories that we need.</span><br><span class="line">CUDA_DIR := /usr/local/cuda</span><br><span class="line"># On Ubuntu 14.04, if cuda tools are installed via</span><br><span class="line"># &quot;sudo apt-get install nvidia-cuda-toolkit&quot; then use this instead:</span><br><span class="line"># CUDA_DIR := /usr</span><br><span class="line"></span><br><span class="line"># CUDA architecture setting: going with all of them.</span><br><span class="line"># For CUDA &lt; 6.0, comment the *_50 lines for compatibility.</span><br><span class="line">CUDA_ARCH := -gencode arch=compute_20,code=sm_20 \</span><br><span class="line">		-gencode arch=compute_20,code=sm_21 \</span><br><span class="line">		-gencode arch=compute_30,code=sm_30 \</span><br><span class="line">		-gencode arch=compute_35,code=sm_35 \</span><br><span class="line">		-gencode arch=compute_50,code=sm_50 \</span><br><span class="line">		-gencode arch=compute_50,code=compute_50</span><br><span class="line"></span><br><span class="line"># BLAS choice:</span><br><span class="line"># atlas for ATLAS (default)</span><br><span class="line"># mkl for MKL</span><br><span class="line"># open for OpenBlas</span><br><span class="line">BLAS := atlas</span><br><span class="line"># Custom (MKL/ATLAS/OpenBLAS) include and lib directories.</span><br><span class="line"># Leave commented to accept the defaults for your choice of BLAS</span><br><span class="line"># (which should work)!</span><br><span class="line"># BLAS_INCLUDE := /path/to/your/blas</span><br><span class="line"># BLAS_LIB := /path/to/your/blas</span><br><span class="line"></span><br><span class="line"># Homebrew puts openblas in a directory that is not on the standard search path</span><br><span class="line"># BLAS_INCLUDE := $(shell brew --prefix openblas)/include</span><br><span class="line"># BLAS_LIB := $(shell brew --prefix openblas)/lib</span><br><span class="line"></span><br><span class="line"># This is required only if you will compile the matlab interface.</span><br><span class="line"># MATLAB directory should contain the mex binary in /bin.</span><br><span class="line"># MATLAB_DIR := /usr/local</span><br><span class="line"># MATLAB_DIR := /Applications/MATLAB_R2012b.app</span><br><span class="line">MATLAB_DIR := /usr/local/MATLAB/R2015a</span><br><span class="line"></span><br><span class="line"># NOTE: this is required only if you will compile the python interface.</span><br><span class="line"># We need to be able to find Python.h and numpy/arrayobject.h.</span><br><span class="line">PYTHON_INCLUDE := /usr/include/python2.7 \</span><br><span class="line">		/usr/lib/python2.7/dist-packages/numpy/core/include</span><br><span class="line"># Anaconda Python distribution is quite popular. Include path:</span><br><span class="line"># Verify anaconda location, sometimes it&apos;s in root.</span><br><span class="line"># ANACONDA_HOME := $(HOME)/anaconda</span><br><span class="line"># PYTHON_INCLUDE := $(ANACONDA_HOME)/include \</span><br><span class="line">		# $(ANACONDA_HOME)/include/python2.7 \</span><br><span class="line">		# $(ANACONDA_HOME)/lib/python2.7/site-packages/numpy/core/include \</span><br><span class="line"></span><br><span class="line"># Uncomment to use Python 3 (default is Python 2)</span><br><span class="line"># PYTHON_LIBRARIES := boost_python3 python3.5m</span><br><span class="line"># PYTHON_INCLUDE := /usr/include/python3.5m \</span><br><span class="line">#                 /usr/lib/python3.5/dist-packages/numpy/core/include</span><br><span class="line"></span><br><span class="line"># We need to be able to find libpythonX.X.so or .dylib.</span><br><span class="line">PYTHON_LIB := /usr/lib</span><br><span class="line"># PYTHON_LIB := $(ANACONDA_HOME)/lib</span><br><span class="line"></span><br><span class="line"># Homebrew installs numpy in a non standard path (keg only)</span><br><span class="line"># PYTHON_INCLUDE += $(dir $(shell python -c &apos;import numpy.core; print(numpy.core.__file__)&apos;))/include</span><br><span class="line"># PYTHON_LIB += $(shell brew --prefix numpy)/lib</span><br><span class="line"></span><br><span class="line"># Uncomment to support layers written in Python (will link against Python libs)</span><br><span class="line"># WITH_PYTHON_LAYER := 1</span><br><span class="line"></span><br><span class="line"># Whatever else you find you need goes here.</span><br><span class="line">INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include</span><br><span class="line">LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib</span><br><span class="line"></span><br><span class="line"># If Homebrew is installed at a non standard location (for example your home directory) and you use it for general dependencies</span><br><span class="line"># INCLUDE_DIRS += $(shell brew --prefix)/include</span><br><span class="line"># LIBRARY_DIRS += $(shell brew --prefix)/lib</span><br><span class="line"></span><br><span class="line"># Uncomment to use `pkg-config` to specify OpenCV library paths.</span><br><span class="line"># (Usually not necessary -- OpenCV libraries are normally installed in one of the above $LIBRARY_DIRS.)</span><br><span class="line"># USE_PKG_CONFIG := 1</span><br><span class="line"></span><br><span class="line">BUILD_DIR := build</span><br><span class="line">DISTRIBUTE_DIR := distribute</span><br><span class="line"></span><br><span class="line"># Uncomment for debugging. Does not work on OSX due to https://github.com/BVLC/caffe/issues/171</span><br><span class="line"># DEBUG := 1</span><br><span class="line"></span><br><span class="line"># The ID of the GPU that &apos;make runtest&apos; will use to run unit tests.</span><br><span class="line">TEST_GPUID := 0</span><br><span class="line"></span><br><span class="line"># enable pretty build (comment to see full commands)</span><br><span class="line">Q ?= @</span><br></pre></td></tr></table></figure>
-<p>python configure:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line">## Refer to http://caffe.berkeleyvision.org/installation.html</span><br><span class="line"># Contributions simplifying and improving our build system are welcome!</span><br><span class="line"></span><br><span class="line"># cuDNN acceleration switch (uncomment to build with cuDNN).</span><br><span class="line">USE_CUDNN := 1</span><br><span class="line"></span><br><span class="line"># CPU-only switch (uncomment to build without GPU support).</span><br><span class="line"># CPU_ONLY := 1</span><br><span class="line"></span><br><span class="line"># uncomment to disable IO dependencies and corresponding data layers</span><br><span class="line"># USE_OPENCV := 0</span><br><span class="line"># USE_LEVELDB := 0</span><br><span class="line"># USE_LMDB := 0</span><br><span class="line"></span><br><span class="line"># uncomment to allow MDB_NOLOCK when reading LMDB files (only if necessary)</span><br><span class="line">#	You should not set this flag if you will be reading LMDBs with any</span><br><span class="line">#	possibility of simultaneous read and write</span><br><span class="line"># ALLOW_LMDB_NOLOCK := 1</span><br><span class="line"></span><br><span class="line"># Uncomment if you&apos;re using OpenCV 3</span><br><span class="line"># OPENCV_VERSION := 3</span><br><span class="line"></span><br><span class="line"># To customize your choice of compiler, uncomment and set the following.</span><br><span class="line"># N.B. the default for Linux is g++ and the default for OSX is clang++</span><br><span class="line"># CUSTOM_CXX := g++</span><br><span class="line"></span><br><span class="line"># CUDA directory contains bin/ and lib/ directories that we need.</span><br><span class="line">CUDA_DIR := /usr/local/cuda</span><br><span class="line"># On Ubuntu 14.04, if cuda tools are installed via</span><br><span class="line"># &quot;sudo apt-get install nvidia-cuda-toolkit&quot; then use this instead:</span><br><span class="line"># CUDA_DIR := /usr</span><br><span class="line"></span><br><span class="line"># CUDA architecture setting: going with all of them.</span><br><span class="line"># For CUDA &lt; 6.0, comment the *_50 lines for compatibility.</span><br><span class="line">CUDA_ARCH := -gencode arch=compute_20,code=sm_20 \</span><br><span class="line">		-gencode arch=compute_20,code=sm_21 \</span><br><span class="line">		-gencode arch=compute_30,code=sm_30 \</span><br><span class="line">		-gencode arch=compute_35,code=sm_35 \</span><br><span class="line">		-gencode arch=compute_50,code=sm_50 \</span><br><span class="line">		-gencode arch=compute_50,code=compute_50</span><br><span class="line"></span><br><span class="line"># BLAS choice:</span><br><span class="line"># atlas for ATLAS (default)</span><br><span class="line"># mkl for MKL</span><br><span class="line"># open for OpenBlas</span><br><span class="line">BLAS := atlas</span><br><span class="line"># Custom (MKL/ATLAS/OpenBLAS) include and lib directories.</span><br><span class="line"># Leave commented to accept the defaults for your choice of BLAS</span><br><span class="line"># (which should work)!</span><br><span class="line"># BLAS_INCLUDE := /path/to/your/blas</span><br><span class="line"># BLAS_LIB := /path/to/your/blas</span><br><span class="line"></span><br><span class="line"># Homebrew puts openblas in a directory that is not on the standard search path</span><br><span class="line"># BLAS_INCLUDE := $(shell brew --prefix openblas)/include</span><br><span class="line"># BLAS_LIB := $(shell brew --prefix openblas)/lib</span><br><span class="line"></span><br><span class="line"># This is required only if you will compile the matlab interface.</span><br><span class="line"># MATLAB directory should contain the mex binary in /bin.</span><br><span class="line"># MATLAB_DIR := /usr/local</span><br><span class="line"># MATLAB_DIR := /Applications/MATLAB_R2012b.app</span><br><span class="line">MATLAB_DIR := /usr/local/MATLAB/R2015a</span><br><span class="line"></span><br><span class="line"># NOTE: this is required only if you will compile the python interface.</span><br><span class="line"># We need to be able to find Python.h and numpy/arrayobject.h.</span><br><span class="line">PYTHON_INCLUDE := /usr/include/python2.7 \</span><br><span class="line">		/usr/lib/python2.7/dist-packages/numpy/core/include</span><br><span class="line"># Anaconda Python distribution is quite popular. Include path:</span><br><span class="line"># Verify anaconda location, sometimes it&apos;s in root.</span><br><span class="line"># ANACONDA_HOME := $(HOME)/anaconda</span><br><span class="line"># PYTHON_INCLUDE := $(ANACONDA_HOME)/include \</span><br><span class="line">		# $(ANACONDA_HOME)/include/python2.7 \</span><br><span class="line">		# $(ANACONDA_HOME)/lib/python2.7/site-packages/numpy/core/include \</span><br><span class="line"></span><br><span class="line"># Uncomment to use Python 3 (default is Python 2)</span><br><span class="line"># PYTHON_LIBRARIES := boost_python3 python3.5m</span><br><span class="line"># PYTHON_INCLUDE := /usr/include/python3.5m \</span><br><span class="line">#                 /usr/lib/python3.5/dist-packages/numpy/core/include</span><br><span class="line"></span><br><span class="line"># We need to be able to find libpythonX.X.so or .dylib.</span><br><span class="line">PYTHON_LIB := /usr/lib</span><br><span class="line"># PYTHON_LIB := $(ANACONDA_HOME)/lib</span><br><span class="line"></span><br><span class="line"># Homebrew installs numpy in a non standard path (keg only)</span><br><span class="line"># PYTHON_INCLUDE += $(dir $(shell python -c &apos;import numpy.core; print(numpy.core.__file__)&apos;))/include</span><br><span class="line"># PYTHON_LIB += $(shell brew --prefix numpy)/lib</span><br><span class="line"></span><br><span class="line"># Uncomment to support layers written in Python (will link against Python libs)</span><br><span class="line"># WITH_PYTHON_LAYER := 1</span><br><span class="line"></span><br><span class="line"># Whatever else you find you need goes here.</span><br><span class="line">INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include</span><br><span class="line">LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib</span><br><span class="line"></span><br><span class="line"># If Homebrew is installed at a non standard location (for example your home directory) and you use it for general dependencies</span><br><span class="line"># INCLUDE_DIRS += $(shell brew --prefix)/include</span><br><span class="line"># LIBRARY_DIRS += $(shell brew --prefix)/lib</span><br><span class="line"></span><br><span class="line"># Uncomment to use `pkg-config` to specify OpenCV library paths.</span><br><span class="line"># (Usually not necessary -- OpenCV libraries are normally installed in one of the above $LIBRARY_DIRS.)</span><br><span class="line"># USE_PKG_CONFIG := 1</span><br><span class="line"></span><br><span class="line">BUILD_DIR := build</span><br><span class="line">DISTRIBUTE_DIR := distribute</span><br><span class="line"></span><br><span class="line"># Uncomment for debugging. Does not work on OSX due to https://github.com/BVLC/caffe/issues/171</span><br><span class="line"># DEBUG := 1</span><br><span class="line"></span><br><span class="line"># The ID of the GPU that &apos;make runtest&apos; will use to run unit tests.</span><br><span class="line">TEST_GPUID := 0</span><br><span class="line"></span><br><span class="line"># enable pretty build (comment to see full commands)</span><br><span class="line">Q ?= @</span><br></pre></td></tr></table></figure>
+<p><strong>[4].<a href="">Recommandated Coures</a></strong> </p>
+<ul>
+<li><a href="http://ufldl.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B" target="_blank" rel="external">UFLDL Tutorial</a></li>
+<li><a href="https://www.udacity.com/course/deep-learning--ud730" target="_blank" rel="external">Deep Learning</a> Google,<em>2016</em></li>
+<li>More mathematics theory  <ul>
+<li><a href="http://open.163.com/special/opencourse/machinelearning.html" target="_blank" rel="external">Machine Learning</a> -Andrew Ng(Stanford University) <em>2009</em></li>
+</ul>
+</li>
+<li>More exact examples <ul>
+<li><a href="https://www.coursera.org/learn/machine-learning" target="_blank" rel="external">Machine Learning</a> -Andrew Ng(Stanford University) <em>2013</em></li>
+</ul>
+</li>
+<li><a href="http://www.holehouse.org/mlclass/index.html#rd?sukey=a76cdd086edb4fceeba6855d8cdc98e809b8e2de04f94287cd100e38c8613eeea53e85523426c14a2317157c43f93878" target="_blank" rel="external">Good Notes of Standford Machine Learning</a></li>
+<li><a href="http://cs231n.stanford.edu/" target="_blank" rel="external">CS231n: Convolutional Neural Networks for Visual Recognition</a> - Fei-Fei Li and Andrej Karpathy (Stanford University) <em>2016</em></li>
+<li></li>
+</ul>
+<hr>
+<p> <strong>[5].<a href="http://deeplearning.net/" target="_blank" rel="external">Deep Learning Reference Website</a></strong> </p>
+<p>As comparing to the traditional feature extraction,here are some basic and useful papers on computer vision:</p>
+<blockquote>
+<p><em>Including:</em></p>
+<ul>
+<li>SIFT <a href="http://www.cs.ubc.ca/~lowe/papers/iccv99.pdf" target="_blank" rel="external">Lowe ‘99</a></li>
+<li>Spin Images <a href="https://www.ri.cmu.edu/pub_files/pub2/johnson_andrew_1997_3/johnson_andrew_1997_3.pdf" target="_blank" rel="external">Johnson &amp; Herbert ‘99</a></li>
+<li>Textons <a href="http://www.cs.berkeley.edu/~malik/papers/LM-3dtexton.pdf" target="_blank" rel="external">Malik et al. ‘99</a></li>
+<li>RIFT <a href="https://hal.inria.fr/inria-00548530/document" target="_blank" rel="external">Lazebnik ‘04</a></li>
+<li>GLOH <a href="http://lear.inrialpes.fr/pubs/2005/MS05/mikolajczyk_pami05.pdf" target="_blank" rel="external">Mikolajczyk &amp; Schmid ‘05</a></li>
+<li>HoG <a href="http://lear.inrialpes.fr/people/triggs/pubs/Dalal-cvpr05.pdf" target="_blank" rel="external">Dalal &amp; Triggs ‘05</a></li>
+<li>SURF <a href="http://www.vision.ee.ethz.ch/~surf/eccv06.pdf" target="_blank" rel="external">Bay et al. ‘06</a></li>
+<li>ImageNet <a href="http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf" target="_blank" rel="external">Krizhevsky ‘12</a></li>
+</ul>
+</blockquote>
+<hr>
+<h1 id="Step-two-Notes-of-Basic-Reference-Paper-for-the-beginners"><a href="#Step-two-Notes-of-Basic-Reference-Paper-for-the-beginners" class="headerlink" title="Step two: Notes of Basic Reference Paper for the beginners"></a>Step two: Notes of Basic Reference Paper for the beginners</h1><hr>
+<p><strong><a href="http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf" target="_blank" rel="external">AlexNet:ImageNet Classification with Deep Convolutional Neural Networks</a></strong></p>
+<p><strong>1.Testing dataset of this paper</strong> -&gt; 1.2 million training images, 50,000 validation images, and<br>150,000 testing images(ILSVRC-2010)</p>
+<p>results:<br>ILSVRC-2012:<br><img src="http://img.blog.csdn.net/20160409194631570" alt="这里写图片描述"></p>
+<p><strong>2.architectecture</strong><br><img src="http://img.blog.csdn.net/20160409193544836" alt="这里写图片描述"></p>
+<p><strong>3.ReLU Nonlinearity</strong><br><img src="http://img.blog.csdn.net/20160409194542615" alt="这里写图片描述"></p>
+<p>Following Nair and Hinton [20],this paper refers to neurons with this nonlinearity as Rectified Linear Units (ReLUs). Deep convolutional neural networks with ReLUs train several times faster than their equivalents with tanh units.</p>
+<p>(On this dataset the primary concern is preventing overfitting, so the effect they are observing is different from the accelerated ability to fit the training set which we report when using ReLUs)</p>
+<p><em>[20] V. Nair and G. E. Hinton. Rectified linear units improve restricted boltzmann machines. In Proc. 27th<br>International Conference on Machine Learning, 2010</em></p>
+<p><strong>4.Local Response Normalization</strong></p>
+<p>ReLUs have the desirable property that they do not require input normalization to prevent them from saturating.Response normalization reduces our top-1 and top-5 error rates by 1.4% and 1.2%,respectively</p>
+<p><strong>5.Overlapping Pooling</strong></p>
+<p>This scheme reduces the top-1 and top-5 error rates by 0.4% and 0.3%, respectively, as compared with the non-overlapping scheme s = 2, z = 2, which produces output of equivalent dimensions</p>
+<p><strong>6.two primary ways for combating overfitting</strong></p>
+<p>This neural network architecture has 60 million parameters,therefore,combat overfitting is a important problem</p>
+<ul>
+<li><p><em>Data Augmentation:</em></p>
+<ul>
+<li><p>The first form of data augmentation consists of generating image translations and horizontal reflections</p>
+</li>
+<li><p>The second form of data augmentation consists of altering the intensities of the RGB channels in training images</p>
+</li>
+</ul>
+</li>
+<li><em>Dropout</em><ul>
+<li>consists of setting to zero the output of each hidden neuron with probability 0.5,The neurons which are “dropped out” in this way do not contribute to the forward pass and do not participate in backpropagation.So every time an input is presented, the neural network samples a different architecture,but all these architectures share weights. This technique reduces complex co-adaptations of neurons,since a neuron cannot rely on the presence of particular other neurons.</li>
+<li><em>note:this paper recommand to use dropout in the first two fully-connected layers of figure architecture</em></li>
+</ul>
+</li>
+</ul>
+<p>more basic papers are waiting for adding…</p>
+<hr>
+<h2 id="Step-three-Install-caffe-and-train-your-own-model"><a href="#Step-three-Install-caffe-and-train-your-own-model" class="headerlink" title="Step three :  Install caffe and train your own model"></a>Step three :  Install caffe and train your own model</h2><hr>
+<p> How to install caffe on winodws：<a href="/uploads/4c01fb55d8d532b386cadfd4a8202a1b/Window下安装caffe在vs2013条件下.pdf">Windows install caffe on VS2013.pdf</a></p>
+<p> Recommend example：<a href="http://caffe.berkeleyvision.org/gathered/examples/cifar10.html" target="_blank" rel="external">Alex’s CIFAR-10 tutorial, Caffe style</a></p>
+<p> If you wanna try more examples,please refer to the example page of <a href="http://caffe.berkeleyvision.org/" target="_blank" rel="external">caffe</a></p>
+<p> Step by step：</p>
+<blockquote>
+<p><em>Including:</em></p>
+<ul>
+<li>1.preparing your dataset</li>
+<li>2.writing the solver file</li>
+<li>3.defining your own model network</li>
+<li>4.Training and Testing the Model</li>
+<li>5.Observing the results.</li>
+</ul>
+</blockquote>
+
           
         
       
@@ -433,8 +502,8 @@ $ ./opencv_latest.sh</code></p>
             
               
                 
-                <a class="post-title-link" href="/2016/04/09/deep-learning-for-beginners/" itemprop="url">
-                  Untitled
+                <a class="post-title-link" href="/2016/04/09/ubuntu14-04-opencv2-4-9-cuda7-0/" itemprop="url">
+                  caffe:ubuntu14.04+opencv2.4.9+cuda7.0
                 </a>
               
             
@@ -447,19 +516,38 @@ $ ./opencv_latest.sh</code></p>
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-09T16:37:49+08:00" content="2016-04-09">
+            <time itemprop="dateCreated" datetime="2016-04-09T17:20:15+08:00" content="2016-04-09">
               2016-04-09
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/caffe/" itemprop="url" rel="index">
+                    <span itemprop="name">caffe</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/09/deep-learning-for-beginners/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/09/deep-learning-for-beginners/" itemprop="commentsCount"></span>
+                <a href="/2016/04/09/ubuntu14-04-opencv2-4-9-cuda7-0/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/09/ubuntu14-04-opencv2-4-9-cuda7-0/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -469,7 +557,7 @@ $ ./opencv_latest.sh</code></p>
 
           
           
-             <span id="/2016/04/09/deep-learning-for-beginners/" class="leancloud_visitors" data-flag-title="">
+             <span id="/2016/04/09/ubuntu14-04-opencv2-4-9-cuda7-0/" class="leancloud_visitors" data-flag-title="caffe:ubuntu14.04+opencv2.4.9+cuda7.0">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -492,160 +580,102 @@ $ ./opencv_latest.sh</code></p>
       
         
           
-            <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><hr>
-<p><code>Deep learning</code>(deep structured learning, hierarchical learning or deep machine learning) is a<br>branch of machine learning based on a set of algorithms that attempt to model high-level abst<br>-ractions in data by using multiple processing layers, with complex structures or otherwise,<br>composed of multiple non-linear transformations.</p>
-<p>Here are some references about learning procedures <em>from the perspective of beginners</em> and sharing<br>some resoures with deep learning about how beginners learned step by step. </p>
-<hr>
-<p>*<em>If there are some more better suggestions,please add following and help make it better :)</em></p>
-<hr>
-<h2 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h2><ul>
-<li><a href="## Step-One:Mainly-build-up-the-basic-sense of-deep-learning">Step one: Mainly build up the basic sense of deep learning</a></li>
-<li><a href="## Step two: Notes of Basic Reference Paper for the beginners">Step two: Notes of Basic Reference Paper for the beginners</a></li>
-<li><a href="## Step three :Install caffe and train your own model">Step three : Install caffe and train your own model</a></li>
+            <h3 id="Step1-install-opencv2-4-9-on-ubuntu"><a href="#Step1-install-opencv2-4-9-on-ubuntu" class="headerlink" title="Step1 install opencv2.4.9 on ubuntu"></a><em>Step1</em> install opencv2.4.9 on ubuntu</h3><ul>
+<li>(<em>recommand</em>)Opencv 2.4.9 according to </li>
 </ul>
-<hr>
-<h2 id="Step-one-Mainly-build-up-the-basic-sense-of-deep-learning"><a href="#Step-one-Mainly-build-up-the-basic-sense-of-deep-learning" class="headerlink" title="Step one: Mainly build up the basic sense of deep learning"></a>Step one: Mainly build up the basic sense of deep learning</h2><p><strong><a href="http://deeplearning.net/tutorial/" target="_blank" rel="external">1</a>.<a href="http://deeplearning.net/tutorial/" target="_blank" rel="external">Deep Learning Notes</a></strong><br>  <em>you can learn some basic senses about the deep learning</em></p>
+<p>Total reference :<br><a href="http://www.cnblogs.com/platero/p/3993877.html" target="_blank" rel="external">http://www.cnblogs.com/platero/p/3993877.html</a><br><a href="http://blog.csdn.net/wingfox117/article/details/46278001" target="_blank" rel="external">http://blog.csdn.net/wingfox117/article/details/46278001</a><br><a href="http://blog.csdn.net/xyy19920105/article/details/50815660" target="_blank" rel="external">http://blog.csdn.net/xyy19920105/article/details/50815660</a></p>
 <blockquote>
-<p><em>Including:</em></p>
+<p>reference link:<br><a href="http://stackoverflow.com/questions/28010399/build-opencv-with-cuda-support" target="_blank" rel="external">http://stackoverflow.com/questions/28010399/build-opencv-with-cuda-support</a><br>When meet the question of <code>NCVPixelOperations.hpp</code><br>Download link:<br>NCVPixelOperations.hpp_<br><a href="http://download.csdn.net/download/znculee/9294885" target="_blank" rel="external">http://download.csdn.net/download/znculee/9294885</a><br>to revise.</p>
+<h4 id="Steps"><a href="#Steps" class="headerlink" title="Steps:"></a>Steps:</h4><p>download opencv2.4.9<br><code>unzip opencv-2.4.9
+cd opencv-2.4.9
+mkdir release
+cd release
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D CUDA_ARCH_BIN=3.2 ..
+make</code><br>success snapshot:<br><img src="http://img.blog.csdn.net/20160408131143436" alt="opencv"><br>after that,input command:</p>
+</blockquote>
+<p><code>sudo make install</code><br><img src="http://img.blog.csdn.net/20160408131946392" alt="这里写图片描述"></p>
+<p>Then how to import on the python<br><code>cp the cv2.so file which in the ~/opencv-2.4.9/build/lib</code><br>to<br><img src="http://img.blog.csdn.net/20160408153241537" alt="这里写图片描述"><br>and get the successful results:<br><img src="http://img.blog.csdn.net/20160408153345459" alt="这里写图片描述"></p>
 <ul>
-<li>AutoEncoder</li>
-<li>Sparse Coding</li>
-<li>Restricted Boltzmann Machine(RBM)</li>
-<li>Deep BeliefNetworks</li>
-<li>Convolutional Neural Networks</li>
+<li>(normally)Opencv 2.4.9 according to<br><a href="http://blog.csdn.net/xiaojidan2011/article/details/40153933" target="_blank" rel="external">http://blog.csdn.net/xiaojidan2011/article/details/40153933</a><blockquote>
+<p>if you meet the following question like:<br><code>Building NVCC (Device) object modules/core/CMakeFiles/cuda_compile.dir/src/cuda/Debug/cuda_compile_generated_gpu_mat.cu.obj
+nvcc fatal : Unsupported gpu architecture &#39;compute_11&#39;</code><br>revise the command as:<br><code>cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D CUDA_GENERATION=Kepler ..</code></p>
+</blockquote>
+</li>
 </ul>
+<ul>
+<li><p>Other reference:<br>Opencv 3.0 according to <code>*(recommand)*</code><br><a href="https://github.com/jayrambhia/Install-OpenCV" target="_blank" rel="external">https://github.com/jayrambhia/Install-OpenCV</a></p>
+<blockquote>
+<p>just need to run the following code:<br><code>$ cd Ubuntu
+$ chmod +x * 
+$ ./opencv_latest.sh</code></p>
+</blockquote>
+</li>
+<li><p>Time consumption: about 30 minutes</p>
+</li>
+</ul>
+<h3 id="Step2-install-cuda7-0"><a href="#Step2-install-cuda7-0" class="headerlink" title="Step2 install cuda7.0"></a><em>Step2</em> install cuda7.0</h3><blockquote>
+<p>sudo dpkg -i cuda-repo-<distro><em><version></version></em><architecture>.deb<br>sudo apt-get update<br>sudo apt-get install cuda<br>export PATH=/usr/local/cuda-7.0/bin:$PATH</architecture></distro></p>
+<p>export LD_LIBRARY_PATH=/usr/local/cuda-7.0/lib64:$LD_LIBRARY_PATH<br>cd /etc/ld.so.conf.d<br>vim cuda.conf<br>(then adding)<br>usr/local/cuda-7.0/lib64</p>
+</blockquote>
+<h3 id="Step3-Boost"><a href="#Step3-Boost" class="headerlink" title="Step3 Boost"></a>Step3 Boost</h3><blockquote>
+<p>sudo apt-get install mpi-default-dev　　#安装mpi库<br>sudo apt-get install libicu-dev　　　　　#支持正则表达式UNICODE字符集<br>sudo apt-get install python-dev　　　　　#需要python的话<br>sudo apt-get install libbz2-dev</p>
+<p>sudo apt-get install libatlas-base-dev </p>
+</blockquote>
+<h3 id="Step4-Caffe-installing"><a href="#Step4-Caffe-installing" class="headerlink" title="Step4 Caffe installing"></a>Step4 Caffe installing</h3><blockquote>
+<p>make all -j8<br>make test -j8<br>make run test -j8 </p>
+</blockquote>
+<p>when meet the error about:</p>
+<blockquote>
+<p>.build_release/tools/caffe<br>.build_release/tools/caffe: error while loading shared libraries: libcudart.so.7.0: cannot open shared object file: No such file or directory</p>
+</blockquote>
+<p><code>need to do</code>:</p>
+<blockquote>
+<p>export PATH=/usr/local/cuda-7.0/bin:$PATH </p>
+<p>export LD_LIBRARY_PATH=/usr/local/cuda-7.0/lib64:$LD_LIBRARY_PATH</p>
+</blockquote>
+<p><code>success:</code><br><img src="http://img.blog.csdn.net/20160408142424526" alt="这里写图片描述"></p>
+<h2 id="Step5-Python-amp-Matlab-wrapper"><a href="#Step5-Python-amp-Matlab-wrapper" class="headerlink" title="Step5 Python &amp; Matlab wrapper"></a>Step5 Python &amp; Matlab wrapper</h2><h3 id="Matlab-Wrapper"><a href="#Matlab-Wrapper" class="headerlink" title="Matlab Wrapper"></a>Matlab Wrapper</h3><p>then compile the <code>python wrapper</code> &amp; <code>matlab wrapper</code><br> if meet the error:</p>
+<blockquote>
+<p>In file included from ./include/caffe/util/device<em>alternate.hpp:40:0,<br>                 from ./include/caffe/common.hpp:19,<br>                 from ./include/caffe/blob.hpp:8,<br>                 from ./include/caffe/caffe.hpp:7,<br>                 from /home/ym/caffe-master/matlab/+caffe/private/caffe</em>.cpp:18:<br>./include/caffe/util/cudnn.hpp:5:19: fatal error: cudnn.h: No such file or directory</p>
+</blockquote>
+<p>then means that you should link the cuDNN<br><a href="http://www.cnblogs.com/platero/p/4118139.html" target="_blank" rel="external">http://www.cnblogs.com/platero/p/4118139.html</a></p>
+<blockquote>
+<p>tar -xzvf cudnn-6.5-linux-R1.tgz<br>cd cudnn-6.5-linux-R1<br>sudo cp lib* /usr/local/cuda/lib64/<br>sudo cp cudnn.h /usr/local/cuda/include/</p>
+</blockquote>
+<p>then you will see the success results:<br><img src="http://img.blog.csdn.net/20160408144221642" alt="这里写图片描述"></p>
+<p><img src="http://img.blog.csdn.net/20160408144309502" alt="这里写图片描述"></p>
+<p>When run matlab demo, i get the following error:</p>
+<blockquote>
+<p>Invalid MEX-file ‘/home/ym/caffe-master/matlab/+caffe/private/caffe_.mexa64’: libcudart.so.7.0: cannot open shared object file:<br>No such file or directory</p>
+</blockquote>
+<p>Solved link:<br><a href="http://www.cnblogs.com/smartvessel/archive/2011/01/21/1940868.html" target="_blank" rel="external">http://www.cnblogs.com/smartvessel/archive/2011/01/21/1940868.html</a><br>Methods:</p>
+<blockquote>
+<p>cd /etc/ld.so.conf.d<br>sudo vi cuda.conf<br>(adding)<br>/usr/local/cuda/lib64<br>(:wq)<br>sudo ldconfig</p>
 </blockquote>
 <hr>
-<p><strong><a href="http://handong1587.github.io/deep_learning/2015/10/09/dl-resources.html" target="_blank" rel="external">2</a>.<a href="http://handong1587.github.io/deep_learning/2015/10/09/dl-resources.html" target="_blank" rel="external">Beginner Reference Papers and Books</a></strong> </p>
 <blockquote>
-<p><em>Including:</em></p>
-<ul>
-<li>AlexNet</li>
-<li>GoogLeNet</li>
-<li>VGGNet</li>
-<li>Inception-v3</li>
-<li>ResNet</li>
-<li>Tensor</li>
-<li>Inception-v4</li>
-</ul>
+<p>总结下来主要有3种方法：</p>
+<ol>
+<li>用ln将需要的so文件链接到/usr/lib或者/lib这两个默认的目录下边<br>ln -s /where/you/install/lib/*.so /usr/lib<br>sudo ldconfig</li>
+</ol>
+<p>2.修改LD_LIBRARY_PATH<br>export LD_LIBRARY_PATH=/where/you/install/lib:$LD_LIBRARY_PATH<br>sudo ldconfig</p>
+<p>3.修改/etc/ld.so.conf，然后刷新<br>vim /etc/ld.so.conf<br>add /where/you/install/lib<br>sudo ldconfig</p>
 </blockquote>
 <hr>
-<p><strong><a href="https://medium.com/@jiefeng/deep-learning-playbook-c5ebe34f8a1a#.de7sdog46" target="_blank" rel="external">3</a>.<a href="https://medium.com/@jiefeng/deep-learning-playbook-c5ebe34f8a1a#.de7sdog46" target="_blank" rel="external">The Deep Learning Playbook</a></strong> </p>
-<blockquote>
-<p><em>Including:</em></p>
-<ul>
-<li>Libraries:<ul>
-<li>Theano (Python)</li>
-<li>Libraries based on Theano: Lasagne, Keras, Pylearn2</li>
-<li>Caffe (C++, with Python wrapper)</li>
-<li>TensorFlow (Python, C++)</li>
-<li>Torch (Lua)</li>
-<li>ConvNetJS (Javascript)</li>
-<li>Deeplearning4j (Java)</li>
-<li>MatConvNet (Matlab)</li>
-</ul>
-</li>
-<li>Projects / Demos:<ul>
-<li>All the tutorials of your favorite library above</li>
-<li>Facial Keypoint Detection</li>
-<li>Deep Dream</li>
-<li>Eyescream</li>
-<li>Deep Q-network (Atari game player)</li>
-<li>Caffe to Theano Model Conversion (use Caffe pretrained model in Lasagne)</li>
-<li>R-CNN</li>
-<li>Fast R-CNN</li>
-<li>Plankton Classification (winning solution of National Data Science Bowl on Kaggle)</li>
-<li>Galaxy Classification (winning solution of Kaggle competition)</li>
-<li>University of Toronto Demos</li>
-</ul>
-</li>
-</ul>
+<h3 id="python-wrapper"><a href="#python-wrapper" class="headerlink" title="python wrapper"></a>python wrapper</h3><blockquote>
+<p>1.revise the Makefile.configure<br><code>make pycaffe</code><br>2.after compile, export the PATH into the /etc/profile<br>and execute<br><code>source ~/.bashrc or /etc/profile</code><br>3.cannot find google.protobuf.internal:<br><img src="http://img.blog.csdn.net/20160408155501092" alt="这里写图片描述"></p>
 </blockquote>
-<hr>
-<p><strong>[4].<a href="">Recommandated Coures</a></strong> </p>
-<ul>
-<li><a href="http://ufldl.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B" target="_blank" rel="external">UFLDL Tutorial</a></li>
-<li><a href="https://www.udacity.com/course/deep-learning--ud730" target="_blank" rel="external">Deep Learning</a> Google,<em>2016</em></li>
-<li>More mathematics theory<ul>
-<li><a href="http://open.163.com/special/opencourse/machinelearning.html" target="_blank" rel="external">Machine Learning</a> -Andrew Ng(Stanford University) <em>2009</em></li>
-</ul>
-</li>
-<li>More exact examples <ul>
-<li><a href="https://www.coursera.org/learn/machine-learning" target="_blank" rel="external">Machine Learning</a> -Andrew Ng(Stanford University) <em>2013</em></li>
-</ul>
-</li>
-<li><a href="http://www.holehouse.org/mlclass/index.html#rd?sukey=a76cdd086edb4fceeba6855d8cdc98e809b8e2de04f94287cd100e38c8613eeea53e85523426c14a2317157c43f93878" target="_blank" rel="external">Good Notes of Standford Machine Learning</a></li>
-<li><a href="http://cs231n.stanford.edu/" target="_blank" rel="external">CS231n: Convolutional Neural Networks for Visual Recognition</a> - Fei-Fei Li and Andrej Karpathy (Stanford University) <em>2016</em></li>
-<li><strong>If you wanna learn more deeply reference coureses,please refer to the Coureses of WIKI PAGE <a href="http://techgit.meitu.com/TechArchive/MTKG/wikis/awesomecvresources" target="_blank" rel="external">awesomecvresources</a></strong></li>
-</ul>
-<hr>
-<p> <strong><a href="http://ufldl.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B" target="_blank" rel="external">5</a>.<a href="http://deeplearning.net/" target="_blank" rel="external">Deep Learning Reference Website</a></strong> </p>
-<p>As comparing to the traditional feature extraction,here are some basic and useful papers on computer vision:</p>
+<p>solve:</p>
 <blockquote>
-<p><em>Including:</em></p>
-<ul>
-<li>SIFT <a href="http://www.cs.ubc.ca/~lowe/papers/iccv99.pdf" target="_blank" rel="external">Lowe ‘99</a></li>
-<li>Spin Images <a href="https://www.ri.cmu.edu/pub_files/pub2/johnson_andrew_1997_3/johnson_andrew_1997_3.pdf" target="_blank" rel="external">Johnson &amp; Herbert ‘99</a></li>
-<li>Textons <a href="http://www.cs.berkeley.edu/~malik/papers/LM-3dtexton.pdf" target="_blank" rel="external">Malik et al. ‘99</a></li>
-<li>RIFT <a href="https://hal.inria.fr/inria-00548530/document" target="_blank" rel="external">Lazebnik ‘04</a></li>
-<li>GLOH <a href="http://lear.inrialpes.fr/pubs/2005/MS05/mikolajczyk_pami05.pdf" target="_blank" rel="external">Mikolajczyk &amp; Schmid ‘05</a></li>
-<li>HoG <a href="http://lear.inrialpes.fr/people/triggs/pubs/Dalal-cvpr05.pdf" target="_blank" rel="external">Dalal &amp; Triggs ‘05</a></li>
-<li>SURF <a href="http://www.vision.ee.ethz.ch/~surf/eccv06.pdf" target="_blank" rel="external">Bay et al. ‘06</a></li>
-<li>ImageNet <a href="http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf" target="_blank" rel="external">Krizhevsky ‘12</a></li>
-</ul>
+<p><code>conda install -c https://conda.anaconda.org/anaconda protobuf</code></p>
 </blockquote>
+<p><img src="http://img.blog.csdn.net/20160408155734009" alt="这里写图片描述"></p>
+<p>success!</p>
 <hr>
-<h1 id="Step-two-Notes-of-Basic-Reference-Paper-for-the-beginners"><a href="#Step-two-Notes-of-Basic-Reference-Paper-for-the-beginners" class="headerlink" title="Step two: Notes of Basic Reference Paper for the beginners"></a>Step two: Notes of Basic Reference Paper for the beginners</h1><hr>
-<p><strong><a href="http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf" target="_blank" rel="external">AlexNet:ImageNet Classification with Deep Convolutional Neural Networks</a></strong></p>
-<p><strong>1.Testing dataset of this paper</strong> -> 1.2 million training images, 50,000 validation images, and<br>150,000 testing images(ILSVRC-2010)</p>
-<p><em>results:</em></p>
-<p>ILSVRC-2010<br><img src="http://upload-images.jianshu.io/upload_images/1792431-b181a2b0a51e0ff4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste\_Image.png"><br>ILSVRC-2012<br><img src="http://upload-images.jianshu.io/upload_images/1792431-1084dbfa99832500.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste\_Image.png"></p>
-<p><strong>2.architectecture</strong></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1792431-4a7faf189aa2e4c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste\_Image.png"></p>
-<p><strong>3.ReLU Nonlinearity</strong></p>
-<p>Following Nair and Hinton <a href="http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf" target="_blank" rel="external">20</a>,this paper refers to neurons with this nonlinearity as Rectified Linear Units (ReLUs). Deep convolutional neural networks with ReLUs train several times faster than their equivalents with tanh units.</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1792431-1992c2ec0fd2bbf2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste\_Image.png"></p>
-<p>(On this dataset the primary concern is preventing overfitting, so the effect they are observing is different from the accelerated ability to fit the training set which we report when using ReLUs)</p>
-<p>*<a href="http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf" target="_blank" rel="external">20</a> V. Nair and G. E. Hinton. Rectified linear units improve restricted boltzmann machines. In Proc. 27th<br>International Conference on Machine Learning, 2010*</p>
-<p><strong>4.Local Response Normalization</strong></p>
-<p>ReLUs have the desirable property that they do not require input normalization to prevent them from saturating.Response normalization reduces our top-1 and top-5 error rates by 1.4% and 1.2%,respectively</p>
-<p><strong>5.Overlapping Pooling</strong></p>
-<p>This scheme reduces the top-1 and top-5 error rates by 0.4% and 0.3%, respectively, as compared with the non-overlapping scheme s = 2, z = 2, which produces output of equivalent dimensions</p>
-<p><strong>6.two primary ways for combating overfitting</strong></p>
-<p>This neural network architecture has 60 million parameters,therefore,combat overfitting is a important problem</p>
-<ul>
-<li><p><em>Data Augmentation:</em></p>
-<ul>
-<li><p>The first form of data augmentation consists of generating image translations and horizontal reflections</p>
-</li>
-<li><p>The second form of data augmentation consists of altering the intensities of the RGB channels in training images</p>
-</li>
-</ul>
-</li>
-<li><em>Dropout</em><ul>
-<li>consists of setting to zero the output of each hidden neuron with probability 0.5,The neurons which are “dropped out” in this way do not contribute to the forward pass and do not participate in backpropagation.So every time an input is presented, the neural network samples a different architecture,but all these architectures share weights. This technique reduces complex co-adaptations of neurons,since a neuron cannot rely on the presence of particular other neurons.</li>
-<li><em>note:this paper recommand to use dropout in the first two fully-connected layers of figure architecture</em></li>
-</ul>
-</li>
-</ul>
-<p>more basic papers are waiting for adding…</p>
-<hr>
-<h2 id="Step-three-Install-caffe-and-train-your-own-model"><a href="#Step-three-Install-caffe-and-train-your-own-model" class="headerlink" title="Step three :  Install caffe and train your own model"></a>Step three :  Install caffe and train your own model</h2><hr>
-<p> How to install caffe on winodws：<a href="/uploads/4c01fb55d8d532b386cadfd4a8202a1b/Window%E4%B8%8B%E5%AE%89%E8%A3%85caffe%E5%9C%A8vs2013%E6%9D%A1%E4%BB%B6%E4%B8%8B.pdf">Windows install caffe on VS2013.pdf</a></p>
-<p> Recommend example：<a href="http://caffe.berkeleyvision.org/gathered/examples/cifar10.html" target="_blank" rel="external">Alex’s CIFAR-10 tutorial, Caffe style</a></p>
-<p> If you wanna try more examples,please refer to the example page of <a href="http://caffe.berkeleyvision.org/" target="_blank" rel="external">caffe</a></p>
-<p> Step by step：</p>
-<blockquote>
-<p><em>Including:</em></p>
-<ul>
-<li>1.preparing your dataset</li>
-<li>2.writing the solver file</li>
-<li>3.defining your own model network</li>
-<li>4.Training and Testing the Model</li>
-<li>5.Observing the results.</li>
-</ul>
-</blockquote>
-
+<p>matlab configure:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line">## Refer to http://caffe.berkeleyvision.org/installation.html</span><br><span class="line"># Contributions simplifying and improving our build system are welcome!</span><br><span class="line"></span><br><span class="line"># cuDNN acceleration switch (uncomment to build with cuDNN).</span><br><span class="line">USE_CUDNN := 1</span><br><span class="line"></span><br><span class="line"># CPU-only switch (uncomment to build without GPU support).</span><br><span class="line"># CPU_ONLY := 1</span><br><span class="line"></span><br><span class="line"># uncomment to disable IO dependencies and corresponding data layers</span><br><span class="line"># USE_OPENCV := 0</span><br><span class="line"># USE_LEVELDB := 0</span><br><span class="line"># USE_LMDB := 0</span><br><span class="line"></span><br><span class="line"># uncomment to allow MDB_NOLOCK when reading LMDB files (only if necessary)</span><br><span class="line">#	You should not set this flag if you will be reading LMDBs with any</span><br><span class="line">#	possibility of simultaneous read and write</span><br><span class="line"># ALLOW_LMDB_NOLOCK := 1</span><br><span class="line"></span><br><span class="line"># Uncomment if you&apos;re using OpenCV 3</span><br><span class="line"># OPENCV_VERSION := 3</span><br><span class="line"></span><br><span class="line"># To customize your choice of compiler, uncomment and set the following.</span><br><span class="line"># N.B. the default for Linux is g++ and the default for OSX is clang++</span><br><span class="line"># CUSTOM_CXX := g++</span><br><span class="line"></span><br><span class="line"># CUDA directory contains bin/ and lib/ directories that we need.</span><br><span class="line">CUDA_DIR := /usr/local/cuda</span><br><span class="line"># On Ubuntu 14.04, if cuda tools are installed via</span><br><span class="line"># &quot;sudo apt-get install nvidia-cuda-toolkit&quot; then use this instead:</span><br><span class="line"># CUDA_DIR := /usr</span><br><span class="line"></span><br><span class="line"># CUDA architecture setting: going with all of them.</span><br><span class="line"># For CUDA &lt; 6.0, comment the *_50 lines for compatibility.</span><br><span class="line">CUDA_ARCH := -gencode arch=compute_20,code=sm_20 \</span><br><span class="line">		-gencode arch=compute_20,code=sm_21 \</span><br><span class="line">		-gencode arch=compute_30,code=sm_30 \</span><br><span class="line">		-gencode arch=compute_35,code=sm_35 \</span><br><span class="line">		-gencode arch=compute_50,code=sm_50 \</span><br><span class="line">		-gencode arch=compute_50,code=compute_50</span><br><span class="line"></span><br><span class="line"># BLAS choice:</span><br><span class="line"># atlas for ATLAS (default)</span><br><span class="line"># mkl for MKL</span><br><span class="line"># open for OpenBlas</span><br><span class="line">BLAS := atlas</span><br><span class="line"># Custom (MKL/ATLAS/OpenBLAS) include and lib directories.</span><br><span class="line"># Leave commented to accept the defaults for your choice of BLAS</span><br><span class="line"># (which should work)!</span><br><span class="line"># BLAS_INCLUDE := /path/to/your/blas</span><br><span class="line"># BLAS_LIB := /path/to/your/blas</span><br><span class="line"></span><br><span class="line"># Homebrew puts openblas in a directory that is not on the standard search path</span><br><span class="line"># BLAS_INCLUDE := $(shell brew --prefix openblas)/include</span><br><span class="line"># BLAS_LIB := $(shell brew --prefix openblas)/lib</span><br><span class="line"></span><br><span class="line"># This is required only if you will compile the matlab interface.</span><br><span class="line"># MATLAB directory should contain the mex binary in /bin.</span><br><span class="line"># MATLAB_DIR := /usr/local</span><br><span class="line"># MATLAB_DIR := /Applications/MATLAB_R2012b.app</span><br><span class="line">MATLAB_DIR := /usr/local/MATLAB/R2015a</span><br><span class="line"></span><br><span class="line"># NOTE: this is required only if you will compile the python interface.</span><br><span class="line"># We need to be able to find Python.h and numpy/arrayobject.h.</span><br><span class="line">PYTHON_INCLUDE := /usr/include/python2.7 \</span><br><span class="line">		/usr/lib/python2.7/dist-packages/numpy/core/include</span><br><span class="line"># Anaconda Python distribution is quite popular. Include path:</span><br><span class="line"># Verify anaconda location, sometimes it&apos;s in root.</span><br><span class="line"># ANACONDA_HOME := $(HOME)/anaconda</span><br><span class="line"># PYTHON_INCLUDE := $(ANACONDA_HOME)/include \</span><br><span class="line">		# $(ANACONDA_HOME)/include/python2.7 \</span><br><span class="line">		# $(ANACONDA_HOME)/lib/python2.7/site-packages/numpy/core/include \</span><br><span class="line"></span><br><span class="line"># Uncomment to use Python 3 (default is Python 2)</span><br><span class="line"># PYTHON_LIBRARIES := boost_python3 python3.5m</span><br><span class="line"># PYTHON_INCLUDE := /usr/include/python3.5m \</span><br><span class="line">#                 /usr/lib/python3.5/dist-packages/numpy/core/include</span><br><span class="line"></span><br><span class="line"># We need to be able to find libpythonX.X.so or .dylib.</span><br><span class="line">PYTHON_LIB := /usr/lib</span><br><span class="line"># PYTHON_LIB := $(ANACONDA_HOME)/lib</span><br><span class="line"></span><br><span class="line"># Homebrew installs numpy in a non standard path (keg only)</span><br><span class="line"># PYTHON_INCLUDE += $(dir $(shell python -c &apos;import numpy.core; print(numpy.core.__file__)&apos;))/include</span><br><span class="line"># PYTHON_LIB += $(shell brew --prefix numpy)/lib</span><br><span class="line"></span><br><span class="line"># Uncomment to support layers written in Python (will link against Python libs)</span><br><span class="line"># WITH_PYTHON_LAYER := 1</span><br><span class="line"></span><br><span class="line"># Whatever else you find you need goes here.</span><br><span class="line">INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include</span><br><span class="line">LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib</span><br><span class="line"></span><br><span class="line"># If Homebrew is installed at a non standard location (for example your home directory) and you use it for general dependencies</span><br><span class="line"># INCLUDE_DIRS += $(shell brew --prefix)/include</span><br><span class="line"># LIBRARY_DIRS += $(shell brew --prefix)/lib</span><br><span class="line"></span><br><span class="line"># Uncomment to use `pkg-config` to specify OpenCV library paths.</span><br><span class="line"># (Usually not necessary -- OpenCV libraries are normally installed in one of the above $LIBRARY_DIRS.)</span><br><span class="line"># USE_PKG_CONFIG := 1</span><br><span class="line"></span><br><span class="line">BUILD_DIR := build</span><br><span class="line">DISTRIBUTE_DIR := distribute</span><br><span class="line"></span><br><span class="line"># Uncomment for debugging. Does not work on OSX due to https://github.com/BVLC/caffe/issues/171</span><br><span class="line"># DEBUG := 1</span><br><span class="line"></span><br><span class="line"># The ID of the GPU that &apos;make runtest&apos; will use to run unit tests.</span><br><span class="line">TEST_GPUID := 0</span><br><span class="line"></span><br><span class="line"># enable pretty build (comment to see full commands)</span><br><span class="line">Q ?= @</span><br></pre></td></tr></table></figure>
+<p>python configure:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line">## Refer to http://caffe.berkeleyvision.org/installation.html</span><br><span class="line"># Contributions simplifying and improving our build system are welcome!</span><br><span class="line"></span><br><span class="line"># cuDNN acceleration switch (uncomment to build with cuDNN).</span><br><span class="line">USE_CUDNN := 1</span><br><span class="line"></span><br><span class="line"># CPU-only switch (uncomment to build without GPU support).</span><br><span class="line"># CPU_ONLY := 1</span><br><span class="line"></span><br><span class="line"># uncomment to disable IO dependencies and corresponding data layers</span><br><span class="line"># USE_OPENCV := 0</span><br><span class="line"># USE_LEVELDB := 0</span><br><span class="line"># USE_LMDB := 0</span><br><span class="line"></span><br><span class="line"># uncomment to allow MDB_NOLOCK when reading LMDB files (only if necessary)</span><br><span class="line">#	You should not set this flag if you will be reading LMDBs with any</span><br><span class="line">#	possibility of simultaneous read and write</span><br><span class="line"># ALLOW_LMDB_NOLOCK := 1</span><br><span class="line"></span><br><span class="line"># Uncomment if you&apos;re using OpenCV 3</span><br><span class="line"># OPENCV_VERSION := 3</span><br><span class="line"></span><br><span class="line"># To customize your choice of compiler, uncomment and set the following.</span><br><span class="line"># N.B. the default for Linux is g++ and the default for OSX is clang++</span><br><span class="line"># CUSTOM_CXX := g++</span><br><span class="line"></span><br><span class="line"># CUDA directory contains bin/ and lib/ directories that we need.</span><br><span class="line">CUDA_DIR := /usr/local/cuda</span><br><span class="line"># On Ubuntu 14.04, if cuda tools are installed via</span><br><span class="line"># &quot;sudo apt-get install nvidia-cuda-toolkit&quot; then use this instead:</span><br><span class="line"># CUDA_DIR := /usr</span><br><span class="line"></span><br><span class="line"># CUDA architecture setting: going with all of them.</span><br><span class="line"># For CUDA &lt; 6.0, comment the *_50 lines for compatibility.</span><br><span class="line">CUDA_ARCH := -gencode arch=compute_20,code=sm_20 \</span><br><span class="line">		-gencode arch=compute_20,code=sm_21 \</span><br><span class="line">		-gencode arch=compute_30,code=sm_30 \</span><br><span class="line">		-gencode arch=compute_35,code=sm_35 \</span><br><span class="line">		-gencode arch=compute_50,code=sm_50 \</span><br><span class="line">		-gencode arch=compute_50,code=compute_50</span><br><span class="line"></span><br><span class="line"># BLAS choice:</span><br><span class="line"># atlas for ATLAS (default)</span><br><span class="line"># mkl for MKL</span><br><span class="line"># open for OpenBlas</span><br><span class="line">BLAS := atlas</span><br><span class="line"># Custom (MKL/ATLAS/OpenBLAS) include and lib directories.</span><br><span class="line"># Leave commented to accept the defaults for your choice of BLAS</span><br><span class="line"># (which should work)!</span><br><span class="line"># BLAS_INCLUDE := /path/to/your/blas</span><br><span class="line"># BLAS_LIB := /path/to/your/blas</span><br><span class="line"></span><br><span class="line"># Homebrew puts openblas in a directory that is not on the standard search path</span><br><span class="line"># BLAS_INCLUDE := $(shell brew --prefix openblas)/include</span><br><span class="line"># BLAS_LIB := $(shell brew --prefix openblas)/lib</span><br><span class="line"></span><br><span class="line"># This is required only if you will compile the matlab interface.</span><br><span class="line"># MATLAB directory should contain the mex binary in /bin.</span><br><span class="line"># MATLAB_DIR := /usr/local</span><br><span class="line"># MATLAB_DIR := /Applications/MATLAB_R2012b.app</span><br><span class="line">MATLAB_DIR := /usr/local/MATLAB/R2015a</span><br><span class="line"></span><br><span class="line"># NOTE: this is required only if you will compile the python interface.</span><br><span class="line"># We need to be able to find Python.h and numpy/arrayobject.h.</span><br><span class="line">PYTHON_INCLUDE := /usr/include/python2.7 \</span><br><span class="line">		/usr/lib/python2.7/dist-packages/numpy/core/include</span><br><span class="line"># Anaconda Python distribution is quite popular. Include path:</span><br><span class="line"># Verify anaconda location, sometimes it&apos;s in root.</span><br><span class="line"># ANACONDA_HOME := $(HOME)/anaconda</span><br><span class="line"># PYTHON_INCLUDE := $(ANACONDA_HOME)/include \</span><br><span class="line">		# $(ANACONDA_HOME)/include/python2.7 \</span><br><span class="line">		# $(ANACONDA_HOME)/lib/python2.7/site-packages/numpy/core/include \</span><br><span class="line"></span><br><span class="line"># Uncomment to use Python 3 (default is Python 2)</span><br><span class="line"># PYTHON_LIBRARIES := boost_python3 python3.5m</span><br><span class="line"># PYTHON_INCLUDE := /usr/include/python3.5m \</span><br><span class="line">#                 /usr/lib/python3.5/dist-packages/numpy/core/include</span><br><span class="line"></span><br><span class="line"># We need to be able to find libpythonX.X.so or .dylib.</span><br><span class="line">PYTHON_LIB := /usr/lib</span><br><span class="line"># PYTHON_LIB := $(ANACONDA_HOME)/lib</span><br><span class="line"></span><br><span class="line"># Homebrew installs numpy in a non standard path (keg only)</span><br><span class="line"># PYTHON_INCLUDE += $(dir $(shell python -c &apos;import numpy.core; print(numpy.core.__file__)&apos;))/include</span><br><span class="line"># PYTHON_LIB += $(shell brew --prefix numpy)/lib</span><br><span class="line"></span><br><span class="line"># Uncomment to support layers written in Python (will link against Python libs)</span><br><span class="line"># WITH_PYTHON_LAYER := 1</span><br><span class="line"></span><br><span class="line"># Whatever else you find you need goes here.</span><br><span class="line">INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include</span><br><span class="line">LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib</span><br><span class="line"></span><br><span class="line"># If Homebrew is installed at a non standard location (for example your home directory) and you use it for general dependencies</span><br><span class="line"># INCLUDE_DIRS += $(shell brew --prefix)/include</span><br><span class="line"># LIBRARY_DIRS += $(shell brew --prefix)/lib</span><br><span class="line"></span><br><span class="line"># Uncomment to use `pkg-config` to specify OpenCV library paths.</span><br><span class="line"># (Usually not necessary -- OpenCV libraries are normally installed in one of the above $LIBRARY_DIRS.)</span><br><span class="line"># USE_PKG_CONFIG := 1</span><br><span class="line"></span><br><span class="line">BUILD_DIR := build</span><br><span class="line">DISTRIBUTE_DIR := distribute</span><br><span class="line"></span><br><span class="line"># Uncomment for debugging. Does not work on OSX due to https://github.com/BVLC/caffe/issues/171</span><br><span class="line"># DEBUG := 1</span><br><span class="line"></span><br><span class="line"># The ID of the GPU that &apos;make runtest&apos; will use to run unit tests.</span><br><span class="line">TEST_GPUID := 0</span><br><span class="line"></span><br><span class="line"># enable pretty build (comment to see full commands)</span><br><span class="line">Q ?= @</span><br></pre></td></tr></table></figure>
           
         
       
@@ -829,7 +859,7 @@ $ ./opencv_latest.sh</code></p>
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -838,7 +868,7 @@ $ ./opencv_latest.sh</code></p>
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
