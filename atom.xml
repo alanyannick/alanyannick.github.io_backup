@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ymwin.xyz/"/>
-  <updated>2016-04-09T11:49:06.000Z</updated>
+  <updated>2016-04-09T12:20:35.000Z</updated>
   <id>http://ymwin.xyz/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sublime text 3 install on ubuntu14.04</title>
+    <link href="http://ymwin.xyz/2016/04/09/Sublime-text-3-install-on-ubuntu14-04/"/>
+    <id>http://ymwin.xyz/2016/04/09/Sublime-text-3-install-on-ubuntu14-04/</id>
+    <published>2016-04-09T12:09:54.000Z</published>
+    <updated>2016-04-09T12:20:35.000Z</updated>
+    
+    <content type="html">&lt;p&gt;Step:&lt;br&gt;&amp;gt;&lt;br&gt;1.sudo add-apt-repository ppa:webupd8team/sublime-text-3&lt;br&gt;2.sudo apt-get update&lt;br&gt;3.sudo apt-get install sublime-text-installer&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Step:&lt;br&gt;&amp;gt;&lt;br&gt;1.sudo add-apt-repository ppa:webupd8team/sublime-text-3&lt;br&gt;2.sudo apt-get update&lt;br&gt;3.sudo apt-get install sublime-text
+    
+    </summary>
+    
+      <category term="Ubuntu" scheme="http://ymwin.xyz/categories/Ubuntu/"/>
+    
+    
+      <category term="SublimeText3" scheme="http://ymwin.xyz/tags/SublimeText3/"/>
+    
+  </entry>
   
   <entry>
     <title>Deep Learning For Beginners</title>
@@ -194,7 +217,7 @@
     <link href="http://ymwin.xyz/2016/04/09/ubuntu14-04-opencv2-4-9-cuda7-0/"/>
     <id>http://ymwin.xyz/2016/04/09/ubuntu14-04-opencv2-4-9-cuda7-0/</id>
     <published>2016-04-09T09:20:15.000Z</published>
-    <updated>2016-04-09T09:52:41.000Z</updated>
+    <updated>2016-04-09T09:52:54.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;Step1-install-opencv2-4-9-on-ubuntu&quot;&gt;&lt;a href=&quot;#Step1-install-opencv2-4-9-on-ubuntu&quot; class=&quot;headerlink&quot; title=&quot;Step1 install opencv2.4.9 on ubuntu&quot;&gt;&lt;/a&gt;&lt;em&gt;Step1&lt;/em&gt; install opencv2.4.9 on ubuntu&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;(&lt;em&gt;recommand&lt;/em&gt;)Opencv 2.4.9 according to &lt;/li&gt;
@@ -311,7 +334,7 @@ $ ./opencv_latest.sh&lt;/code&gt;&lt;/p&gt;
     <link href="http://ymwin.xyz/2016/03/25/Nice-Markdown-Tool-and-Insert-image/"/>
     <id>http://ymwin.xyz/2016/03/25/Nice-Markdown-Tool-and-Insert-image/</id>
     <published>2016-03-25T02:02:48.000Z</published>
-    <updated>2016-04-09T09:07:13.000Z</updated>
+    <updated>2016-04-09T12:20:12.000Z</updated>
     
     <content type="html">&lt;p&gt;markdown toools link:&lt;br&gt;&lt;a href=&quot;https://maxiang.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;马克飞象&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The most efficient tools is link to &lt;a href=&quot;http://www.jianshu.com/writer#/notebooks/3674637/notes/3355966/preview&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;简书&lt;/a&gt;&lt;/p&gt;
@@ -325,6 +348,10 @@ $ ./opencv_latest.sh&lt;/code&gt;&lt;/p&gt;
     
     </summary>
     
+      <category term="markdown" scheme="http://ymwin.xyz/categories/markdown/"/>
+    
+    
+      <category term="markdown" scheme="http://ymwin.xyz/tags/markdown/"/>
     
   </entry>
   
