@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ymwin.xyz/"/>
-  <updated>2016-04-09T08:59:10.000Z</updated>
+  <updated>2016-04-09T09:12:24.000Z</updated>
   <id>http://ymwin.xyz/</id>
   
   <author>
@@ -16,14 +16,185 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="http://ymwin.xyz/2016/04/09/deep-learning-for-beginners/"/>
+    <id>http://ymwin.xyz/2016/04/09/deep-learning-for-beginners/</id>
+    <published>2016-04-09T08:37:49.000Z</published>
+    <updated>2016-04-09T09:12:24.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;&lt;code&gt;Deep learning&lt;/code&gt;(deep structured learning, hierarchical learning or deep machine learning) is a&lt;br&gt;branch of machine learning based on a set of algorithms that attempt to model high-level abst&lt;br&gt;-ractions in data by using multiple processing layers, with complex structures or otherwise,&lt;br&gt;composed of multiple non-linear transformations.&lt;/p&gt;
+&lt;p&gt;Here are some references about learning procedures &lt;em&gt;from the perspective of beginners&lt;/em&gt; and sharing&lt;br&gt;some resoures with deep learning about how beginners learned step by step. &lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;*If there are some more better suggestions,please add following and help make it better :)&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;Table-of-Contents&quot;&gt;&lt;a href=&quot;#Table-of-Contents&quot; class=&quot;headerlink&quot; title=&quot;Table of Contents&quot;&gt;&lt;/a&gt;Table of Contents&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;## Step-One:Mainly-build-up-the-basic-sense of-deep-learning&quot;&gt;Step one: Mainly build up the basic sense of deep learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;## Step two: Notes of Basic Reference Paper for the beginners&quot;&gt;Step two: Notes of Basic Reference Paper for the beginners&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;## Step three :Install caffe and train your own model&quot;&gt;Step three : Install caffe and train your own model&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;Step-one-Mainly-build-up-the-basic-sense-of-deep-learning&quot;&gt;&lt;a href=&quot;#Step-one-Mainly-build-up-the-basic-sense-of-deep-learning&quot; class=&quot;headerlink&quot; title=&quot;Step one: Mainly build up the basic sense of deep learning&quot;&gt;&lt;/a&gt;Step one: Mainly build up the basic sense of deep learning&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;[1].&lt;a href=&quot;http://deeplearning.net/tutorial/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Deep Learning Notes&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;  &lt;em&gt;you can learn some basic senses about the deep learning&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Including:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AutoEncoder&lt;/li&gt;
+&lt;li&gt;Sparse Coding&lt;/li&gt;
+&lt;li&gt;Restricted Boltzmann Machine(RBM)&lt;/li&gt;
+&lt;li&gt;Deep BeliefNetworks&lt;/li&gt;
+&lt;li&gt;Convolutional Neural Networks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;[2].&lt;a href=&quot;http://handong1587.github.io/deep_learning/2015/10/09/dl-resources.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Beginner Reference Papers and Books&lt;/a&gt;&lt;/strong&gt; &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Including:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AlexNet&lt;/li&gt;
+&lt;li&gt;GoogLeNet&lt;/li&gt;
+&lt;li&gt;VGGNet&lt;/li&gt;
+&lt;li&gt;Inception-v3&lt;/li&gt;
+&lt;li&gt;ResNet&lt;/li&gt;
+&lt;li&gt;Tensor&lt;/li&gt;
+&lt;li&gt;Inception-v4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;[3].&lt;a href=&quot;https://medium.com/@jiefeng/deep-learning-playbook-c5ebe34f8a1a#.de7sdog46&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;The Deep Learning Playbook&lt;/a&gt;&lt;/strong&gt; &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Including:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Libraries:&lt;ul&gt;
+&lt;li&gt;Theano (Python)&lt;/li&gt;
+&lt;li&gt;Libraries based on Theano: Lasagne, Keras, Pylearn2&lt;/li&gt;
+&lt;li&gt;Caffe (C++, with Python wrapper)&lt;/li&gt;
+&lt;li&gt;TensorFlow (Python, C++)&lt;/li&gt;
+&lt;li&gt;Torch (Lua)&lt;/li&gt;
+&lt;li&gt;ConvNetJS (Javascript)&lt;/li&gt;
+&lt;li&gt;Deeplearning4j (Java)&lt;/li&gt;
+&lt;li&gt;MatConvNet (Matlab)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Projects / Demos:&lt;ul&gt;
+&lt;li&gt;All the tutorials of your favorite library above&lt;/li&gt;
+&lt;li&gt;Facial Keypoint Detection&lt;/li&gt;
+&lt;li&gt;Deep Dream&lt;/li&gt;
+&lt;li&gt;Eyescream&lt;/li&gt;
+&lt;li&gt;Deep Q-network (Atari game player)&lt;/li&gt;
+&lt;li&gt;Caffe to Theano Model Conversion (use Caffe pretrained model in Lasagne)&lt;/li&gt;
+&lt;li&gt;R-CNN&lt;/li&gt;
+&lt;li&gt;Fast R-CNN&lt;/li&gt;
+&lt;li&gt;Plankton Classification (winning solution of National Data Science Bowl on Kaggle)&lt;/li&gt;
+&lt;li&gt;Galaxy Classification (winning solution of Kaggle competition)&lt;/li&gt;
+&lt;li&gt;University of Toronto Demos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;[4].&lt;a href=&quot;&quot;&gt;Recommandated Coures&lt;/a&gt;&lt;/strong&gt; &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://ufldl.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;UFLDL Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.udacity.com/course/deep-learning--ud730&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Deep Learning&lt;/a&gt; Google,&lt;em&gt;2016&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;More mathematics theory  &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://open.163.com/special/opencourse/machinelearning.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Machine Learning&lt;/a&gt; -Andrew Ng(Stanford University) &lt;em&gt;2009&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;More exact examples &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/learn/machine-learning&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Machine Learning&lt;/a&gt; -Andrew Ng(Stanford University) &lt;em&gt;2013&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.holehouse.org/mlclass/index.html#rd?sukey=a76cdd086edb4fceeba6855d8cdc98e809b8e2de04f94287cd100e38c8613eeea53e85523426c14a2317157c43f93878&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Good Notes of Standford Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://cs231n.stanford.edu/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CS231n: Convolutional Neural Networks for Visual Recognition&lt;/a&gt; - Fei-Fei Li and Andrej Karpathy (Stanford University) &lt;em&gt;2016&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;If you wanna learn more deeply reference coureses,please refer to the Coureses of WIKI PAGE &lt;a href=&quot;http://techgit.meitu.com/TechArchive/MTKG/wikis/awesomecvresources&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;awesomecvresources&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt; &lt;strong&gt;[5].&lt;a href=&quot;http://deeplearning.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Deep Learning Reference Website&lt;/a&gt;&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;As comparing to the traditional feature extraction,here are some basic and useful papers on computer vision:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Including:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SIFT &lt;a href=&quot;http://www.cs.ubc.ca/~lowe/papers/iccv99.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Lowe ‘99&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Spin Images &lt;a href=&quot;https://www.ri.cmu.edu/pub_files/pub2/johnson_andrew_1997_3/johnson_andrew_1997_3.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Johnson &amp;amp; Herbert ‘99&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Textons &lt;a href=&quot;http://www.cs.berkeley.edu/~malik/papers/LM-3dtexton.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Malik et al. ‘99&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;RIFT &lt;a href=&quot;https://hal.inria.fr/inria-00548530/document&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Lazebnik ‘04&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GLOH &lt;a href=&quot;http://lear.inrialpes.fr/pubs/2005/MS05/mikolajczyk_pami05.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mikolajczyk &amp;amp; Schmid ‘05&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;HoG &lt;a href=&quot;http://lear.inrialpes.fr/people/triggs/pubs/Dalal-cvpr05.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Dalal &amp;amp; Triggs ‘05&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SURF &lt;a href=&quot;http://www.vision.ee.ethz.ch/~surf/eccv06.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Bay et al. ‘06&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ImageNet &lt;a href=&quot;http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Krizhevsky ‘12&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;Step-two-Notes-of-Basic-Reference-Paper-for-the-beginners&quot;&gt;&lt;a href=&quot;#Step-two-Notes-of-Basic-Reference-Paper-for-the-beginners&quot; class=&quot;headerlink&quot; title=&quot;Step two: Notes of Basic Reference Paper for the beginners&quot;&gt;&lt;/a&gt;Step two: Notes of Basic Reference Paper for the beginners&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AlexNet:ImageNet Classification with Deep Convolutional Neural Networks&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.Testing dataset of this paper&lt;/strong&gt; -&amp;gt; 1.2 million training images, 50,000 validation images, and&lt;br&gt;150,000 testing images(ILSVRC-2010)&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;results:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;ILSVRC-2010&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1792431-b181a2b0a51e0ff4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;Paste_Image.png&quot;&gt;&lt;br&gt;ILSVRC-2012&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1792431-1084dbfa99832500.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;Paste_Image.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.architectecture&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1792431-4a7faf189aa2e4c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;Paste_Image.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.ReLU Nonlinearity&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Following Nair and Hinton [20],this paper refers to neurons with this nonlinearity as Rectified Linear Units (ReLUs). Deep convolutional neural networks with ReLUs train several times faster than their equivalents with tanh units.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1792431-1992c2ec0fd2bbf2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;Paste_Image.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;(On this dataset the primary concern is preventing overfitting, so the effect they are observing is different from the accelerated ability to fit the training set which we report when using ReLUs)&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;[20] V. Nair and G. E. Hinton. Rectified linear units improve restricted boltzmann machines. In Proc. 27th&lt;br&gt;International Conference on Machine Learning, 2010&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4.Local Response Normalization&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;ReLUs have the desirable property that they do not require input normalization to prevent them from saturating.Response normalization reduces our top-1 and top-5 error rates by 1.4% and 1.2%,respectively&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5.Overlapping Pooling&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This scheme reduces the top-1 and top-5 error rates by 0.4% and 0.3%, respectively, as compared with the non-overlapping scheme s = 2, z = 2, which produces output of equivalent dimensions&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6.two primary ways for combating overfitting&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This neural network architecture has 60 million parameters,therefore,combat overfitting is a important problem&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Data Augmentation:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The first form of data augmentation consists of generating image translations and horizontal reflections&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The second form of data augmentation consists of altering the intensities of the RGB channels in training images&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Dropout&lt;/em&gt;&lt;ul&gt;
+&lt;li&gt;consists of setting to zero the output of each hidden neuron with probability 0.5,The neurons which are “dropped out” in this way do not contribute to the forward pass and do not participate in backpropagation.So every time an input is presented, the neural network samples a different architecture,but all these architectures share weights. This technique reduces complex co-adaptations of neurons,since a neuron cannot rely on the presence of particular other neurons.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;note:this paper recommand to use dropout in the first two fully-connected layers of figure architecture&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;more basic papers are waiting for adding…&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;Step-three-Install-caffe-and-train-your-own-model&quot;&gt;&lt;a href=&quot;#Step-three-Install-caffe-and-train-your-own-model&quot; class=&quot;headerlink&quot; title=&quot;Step three :  Install caffe and train your own model&quot;&gt;&lt;/a&gt;Step three :  Install caffe and train your own model&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt; How to install caffe on winodws：&lt;a href=&quot;/uploads/4c01fb55d8d532b386cadfd4a8202a1b/Window下安装caffe在vs2013条件下.pdf&quot;&gt;Windows install caffe on VS2013.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; Recommend example：&lt;a href=&quot;http://caffe.berkeleyvision.org/gathered/examples/cifar10.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Alex’s CIFAR-10 tutorial, Caffe style&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; If you wanna try more examples,please refer to the example page of &lt;a href=&quot;http://caffe.berkeleyvision.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;caffe&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; Step by step：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Including:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1.preparing your dataset&lt;/li&gt;
+&lt;li&gt;2.writing the solver file&lt;/li&gt;
+&lt;li&gt;3.defining your own model network&lt;/li&gt;
+&lt;li&gt;4.Training and Testing the Model&lt;/li&gt;
+&lt;li&gt;5.Observing the results.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;&lt;code&gt;Deep learning&lt;/code
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Nice Markdown Tool and Insert image</title>
     <link href="http://ymwin.xyz/2016/03/25/Nice-Markdown-Tool-and-Insert-image/"/>
     <id>http://ymwin.xyz/2016/03/25/Nice-Markdown-Tool-and-Insert-image/</id>
     <published>2016-03-25T02:02:48.000Z</published>
-    <updated>2016-04-09T08:59:10.000Z</updated>
+    <updated>2016-04-09T09:07:13.000Z</updated>
     
     <content type="html">&lt;p&gt;markdown toools link:&lt;br&gt;&lt;a href=&quot;https://maxiang.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;马克飞象&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1792431-401732c061e599d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;Paste_Image.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;The most efficient tools is link to &lt;a href=&quot;http://www.jianshu.com/writer#/notebooks/3674637/notes/3355966/preview&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;简书&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;and paste the picture get the corresponding loading image link by markdown format.&lt;/p&gt;
 </content>
@@ -31,7 +202,7 @@
     <summary type="html">
     
       &lt;p&gt;markdown toools link:&lt;br&gt;&lt;a href=&quot;https://maxiang.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;马克飞象&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://upload-images.jian
+&lt;p&gt;The most efficient tools is link to
     
     </summary>
     
@@ -126,115 +297,6 @@
     
     
       <category term="hexo" scheme="http://ymwin.xyz/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>deep learning for beginners</title>
-    <link href="http://ymwin.xyz/2016/03/24/deep-learning-for-beginners/"/>
-    <id>http://ymwin.xyz/2016/03/24/deep-learning-for-beginners/</id>
-    <published>2016-03-24T05:20:55.000Z</published>
-    <updated>2016-04-09T08:37:49.000Z</updated>
-    
-    <content type="html">&lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;Deep learning&lt;/em&gt;(deep structured learning, hierarchical learning or deep machine learning) is a&lt;br&gt;branch of machine learning based on a set of algorithms that attempt to model high-level abst&lt;br&gt;-ractions in data by using multiple processing layers, with complex structures or otherwise,&lt;br&gt;composed of multiple non-linear transformations.&lt;/p&gt;
-&lt;footer&gt;&lt;strong&gt;Wikipedia&lt;/strong&gt;&lt;cite&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Deep_learning&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;en.wikipedia.org/wiki/Deep_learning&lt;/a&gt;&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;
-&lt;p&gt;Here are some references about learning procedures &lt;em&gt;from the perspective of beginners&lt;/em&gt; and sharing&lt;br&gt;some resoures with deep learning about how beginners learned step by step. &lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;*If there are some more better suggestions,please add following and help make it better :)&lt;/em&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;Step-one-Mainly-build-up-the-basic-sense-of-deep-learning&quot;&gt;&lt;a href=&quot;#Step-one-Mainly-build-up-the-basic-sense-of-deep-learning&quot; class=&quot;headerlink&quot; title=&quot;Step one: Mainly build up the basic sense of deep learning&quot;&gt;&lt;/a&gt;Step one: Mainly build up the basic sense of deep learning&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;[1].&lt;a href=&quot;http://deeplearning.net/tutorial/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Deep Learning Notes&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;  &lt;em&gt;you can learn some basic senses about the deep learning&lt;/em&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Including:&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;AutoEncoder&lt;/li&gt;
-&lt;li&gt;Sparse Coding&lt;/li&gt;
-&lt;li&gt;Restricted Boltzmann Machine(RBM)&lt;/li&gt;
-&lt;li&gt;Deep BeliefNetworks&lt;/li&gt;
-&lt;li&gt;Convolutional Neural Networks&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;[2].&lt;a href=&quot;http://handong1587.github.io/deep_learning/2015/10/09/dl-resources.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Beginner Reference Papers and Books&lt;/a&gt;&lt;/strong&gt; &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Including:&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;AlexNet&lt;/li&gt;
-&lt;li&gt;GoogLeNet&lt;/li&gt;
-&lt;li&gt;VGGNet&lt;/li&gt;
-&lt;li&gt;Inception-v3&lt;/li&gt;
-&lt;li&gt;ResNet&lt;/li&gt;
-&lt;li&gt;Tensor&lt;/li&gt;
-&lt;li&gt;Inception-v4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;[3].&lt;a href=&quot;https://medium.com/@jiefeng/deep-learning-playbook-c5ebe34f8a1a#.de7sdog46&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;The Deep Learning Playbook&lt;/a&gt;&lt;/strong&gt; &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Including:&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Libraries:&lt;ul&gt;
-&lt;li&gt;Theano (Python)&lt;/li&gt;
-&lt;li&gt;Libraries based on Theano: Lasagne, Keras, Pylearn2&lt;/li&gt;
-&lt;li&gt;Caffe (C++, with Python wrapper)&lt;/li&gt;
-&lt;li&gt;TensorFlow (Python, C++)&lt;/li&gt;
-&lt;li&gt;Torch (Lua)&lt;/li&gt;
-&lt;li&gt;ConvNetJS (Javascript)&lt;/li&gt;
-&lt;li&gt;Deeplearning4j (Java)&lt;/li&gt;
-&lt;li&gt;MatConvNet (Matlab)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Projects / Demos:&lt;ul&gt;
-&lt;li&gt;All the tutorials of your favorite library above&lt;/li&gt;
-&lt;li&gt;Facial Keypoint Detection&lt;/li&gt;
-&lt;li&gt;Deep Dream&lt;/li&gt;
-&lt;li&gt;Eyescream&lt;/li&gt;
-&lt;li&gt;Deep Q-network (Atari game player)&lt;/li&gt;
-&lt;li&gt;Caffe to Theano Model Conversion (use Caffe pretrained model in Lasagne)&lt;/li&gt;
-&lt;li&gt;R-CNN&lt;/li&gt;
-&lt;li&gt;Fast R-CNN&lt;/li&gt;
-&lt;li&gt;Plankton Classification (winning solution of National Data Science Bowl on Kaggle)&lt;/li&gt;
-&lt;li&gt;Galaxy Classification (winning solution of Kaggle competition)&lt;/li&gt;
-&lt;li&gt;University of Toronto Demos&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;[4].&lt;a href=&quot;&quot;&gt;Recommandated Coures&lt;/a&gt;&lt;/strong&gt; &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Including:&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://ufldl.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;UFLDL Tutorial&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.udacity.com/course/deep-learning--ud730&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Deep Learning&lt;/a&gt; Google,&lt;em&gt;2016&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;More mathematics theory  &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://open.163.com/special/opencourse/machinelearning.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Machine Learning&lt;/a&gt; -Andrew Ng(Stanford University) &lt;em&gt;2009&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;More exact examples &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/learn/machine-learning&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Machine Learning&lt;/a&gt; -Andrew Ng(Stanford University) &lt;em&gt;2013&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.holehouse.org/mlclass/index.html#rd?sukey=a76cdd086edb4fceeba6855d8cdc98e809b8e2de04f94287cd100e38c8613eeea53e85523426c14a2317157c43f93878&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Good Notes of Standford Machine Learning&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://cs231n.stanford.edu/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CS231n: Convolutional Neural Networks for Visual Recognition&lt;/a&gt; - Fei-Fei Li and Andrej Karpathy (Stanford University) &lt;em&gt;2016&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;If you wanna learn more deeply reference coureses,please refer to the Coureses of WIKI PAGE &lt;a href=&quot;http://techgit.meitu.com/TechArchive/MTKG/wikis/awesomecvresources&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;awesomecvresources&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;p&gt; &lt;strong&gt;[5].&lt;a href=&quot;http://deeplearning.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Deep Learning Reference Website&lt;/a&gt;&lt;/strong&gt; &lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;Step-two-Notes-of-Basic-Reference-Paper-for-the-beginners&quot;&gt;&lt;a href=&quot;#Step-two-Notes-of-Basic-Reference-Paper-for-the-beginners&quot; class=&quot;headerlink&quot; title=&quot;Step two: Notes of Basic Reference Paper for the beginners&quot;&gt;&lt;/a&gt;Step two: Notes of Basic Reference Paper for the beginners&lt;/h1&gt;&lt;hr&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;Deep learning&lt;
-    
-    </summary>
-    
-      <category term="deep learning,machine learning" scheme="http://ymwin.xyz/categories/deep-learning-machine-learning/"/>
-    
-    
-      <category term="deep learning" scheme="http://ymwin.xyz/tags/deep-learning/"/>
     
   </entry>
   
